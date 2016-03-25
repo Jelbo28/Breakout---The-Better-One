@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f7bbe9bf40545e748af197667d7d994f
+timeCreated: 1450475285
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - brickParticle: {fileID: 191312, guid: 31ecdeef05cfacd4b894262a1a6d02bb, type: 2}
+  - Upgrade: {fileID: 111370, guid: 3db01b476461f5241b66d6038b6a21d2, type: 2}
+  - Cracked1: {fileID: 2800000, guid: fe6a63d601c064141af632d45ea72e9a, type: 3}
+  - Cracked2: {fileID: 2800000, guid: 203aa21292f3c034fad64a04641f7df2, type: 3}
+  - Cracked3: {fileID: 2800000, guid: 3f95dae602c2cb64c83f4d63570aa6a5, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
