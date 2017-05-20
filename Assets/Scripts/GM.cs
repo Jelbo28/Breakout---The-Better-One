@@ -20,6 +20,8 @@ public class GM : MonoBehaviour
     Text scoreText;
     [SerializeField]
     GameObject gameOver;
+
+    [SerializeField] private GameObject bricksHolder;
     [SerializeField]
     GameObject youWon;
     [SerializeField]
@@ -115,17 +117,9 @@ public class GM : MonoBehaviour
     }
 
     public void CheckLevel()
-	{
-		switch(Application.loadedLevelName)
-		{
-		case "Level 01":
-			bricks = 20;
-			break;
-		case "Level 02":
-			bricks = 2;
-			break;
-		}
-	}
+    {
+        bricks = bricksHolder.transform.childCount;
+    }
 
     /*
 	void HotFix()

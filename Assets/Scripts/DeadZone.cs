@@ -9,6 +9,7 @@ public class DeadZone : MonoBehaviour
 		if (col.gameObject.tag == "Ball")
 		{
 		GM.instance.LoseLife();
+            Destroy(col.gameObject);
 		}
 		// GameManager.LoseLife();
 	}
