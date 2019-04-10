@@ -9,7 +9,8 @@ public class Paddle : MonoBehaviour
 	float paddleSpeed;
     [SerializeField]
     float clampLength;
-    private Vector3 playerPosition = new Vector3 (0, -9.5f, 0);
+    [SerializeField]
+    private Vector3 initialPlayerPosition = new Vector3 (0, -15f, 0);
 	//Vector3 lastPosition = Vector3.zero;
 	//public float Speed = 0f;
 	//public Vector3 localDirection = Vector3.zero;
@@ -26,8 +27,8 @@ public class Paddle : MonoBehaviour
 	void Move ()
 	{
         float xPosition = transform.position.x + (Input.GetAxis("Horizontal") * paddleSpeed);
-        playerPosition = new Vector3(Mathf.Clamp(xPosition, -clampLength, clampLength), -9.5f, 0f);
-        transform.position = playerPosition;
+        initialPlayerPosition = new Vector3(Mathf.Clamp(xPosition, -clampLength, clampLength), initialPlayerPosition.y, 0f);
+        transform.position = initialPlayerPosition;
         /* ~ Old Way Using The Mouse
         Vector3 clampedPosition = transform.position;
         float xMove = Input.mousePosition.x;
