@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GM : MonoBehaviour 
+public class BTBO_GM : MonoBehaviour 
 {
     #region Variables
+    [SerializeField]
+    Scene level;
     [SerializeField]
     int lives = 3;
     [SerializeField]
@@ -33,7 +36,7 @@ public class GM : MonoBehaviour
 
 	Animator anim;
 
-	public static GM instance = null;
+	public static BTBO_GM instance = null;
 
 	private GameObject clonePaddle;
 	private GameObject Bricks;
@@ -87,7 +90,7 @@ public class GM : MonoBehaviour
 	void Reset()
 	{
 		Time.timeScale = 1f;
-		Application.LoadLevel (Application.loadedLevel);
+		SceneManager.SetActiveScene(level);
 	}
 
 	public void LoseLife()

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bricks : MonoBehaviour 
+public class BTBO_Bricks : MonoBehaviour 
 {
 	public GameObject brickParticle;
 	public GameObject Upgrade;
@@ -44,25 +44,25 @@ public class Bricks : MonoBehaviour
 		case 0:
             transform.GetComponent<Renderer>().material.mainTexture = Cracked1;
             transform.GetComponent<Renderer>().material.color = Color.green;
-            GM.instance.HitBrick();
+            BTBO_GM.instance.HitBrick();
             collisionNumber++;
 			break;
 		case 1:
             transform.GetComponent<Renderer>().material.mainTexture = Cracked2;
             transform.GetComponent<Renderer>().material.color = Color.yellow;
-            GM.instance.HitBrick();
+            BTBO_GM.instance.HitBrick();
             collisionNumber++;
 			break;
 		case 2:
             transform.GetComponent<Renderer>().material.mainTexture = Cracked3;
             transform.GetComponent<Renderer>().material.color = Color.red;
-            GM.instance.HitBrick();
+            BTBO_GM.instance.HitBrick();
             collisionNumber++;
 			break;
 		case 3:
 			Instantiate (brickParticle, transform.position, Quaternion.identity);
-			//SpawnItem ();
-			GM.instance.DestroyBrick();
+                //SpawnItem ();
+            BTBO_GM.instance.DestroyBrick();
 			Destroy(gameObject);
 			break;
 		}

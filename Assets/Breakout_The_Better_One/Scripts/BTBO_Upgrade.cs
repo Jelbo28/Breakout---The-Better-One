@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Upgrade : MonoBehaviour 
+public class BTBO_Upgrade : MonoBehaviour 
 {
 	Vector3 Position;
 	float fallSpeed = -5;

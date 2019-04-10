@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Paddle : MonoBehaviour 
+public class BTBO_Paddle : MonoBehaviour 
 {
     #region Variables
     float speed = 5f;

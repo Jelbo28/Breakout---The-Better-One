@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Ball : MonoBehaviour 
+public class BTBO_Ball : MonoBehaviour 
 {
     #region Variables
     [SerializeField]

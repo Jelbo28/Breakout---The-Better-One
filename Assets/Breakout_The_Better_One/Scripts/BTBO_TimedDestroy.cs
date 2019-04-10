@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TimedDestroy : MonoBehaviour 
+public class BTBO_TimedDestroy : MonoBehaviour 
 {
 	public float destroyTime = 1f;
 	// Use this for initialization
