@@ -74,7 +74,7 @@ public class BTBO_GM : MonoBehaviour
 		if (bricks < 1) 
 		{
 			youWon.SetActive(true);
-			Time.timeScale = .25f;
+			Time.timeScale = .75f;
 			Invoke ("Reset", resetDelay);
 		}
 
