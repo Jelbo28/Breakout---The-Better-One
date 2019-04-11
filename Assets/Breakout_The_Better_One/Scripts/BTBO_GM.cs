@@ -7,7 +7,7 @@ public class BTBO_GM : MonoBehaviour
 {
     #region Variables
     [SerializeField]
-    Scene level;
+    int level = 0;
     [SerializeField]
     int lives = 3;
     [SerializeField]
@@ -90,7 +90,7 @@ public class BTBO_GM : MonoBehaviour
 	void Reset()
 	{
 		Time.timeScale = 1f;
-		SceneManager.SetActiveScene(level);
+		SceneManager.LoadScene(level);
 	}
 
 	public void LoseLife()
