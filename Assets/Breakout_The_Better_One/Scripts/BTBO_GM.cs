@@ -19,8 +19,10 @@ public class BTBO_GM : MonoBehaviour
     float resetDelay = 1f;
     [SerializeField]
     Text livesText;
+    string originalLives;
     [SerializeField]
     Text scoreText;
+    string originalScore;
     [SerializeField]
     GameObject gameOver;
 
@@ -47,8 +49,11 @@ public class BTBO_GM : MonoBehaviour
 
     void Awake () 
 	{
-		livesText.text = "Lives: 3";
-		scoreText.text = "Score: 0";
+        originalLives = livesText.text;
+        originalScore = scoreText.text;
+
+        livesText.text = originalLives + "3";
+		scoreText.text = originalScore + "0";
 		gameOver.SetActive(false);
 		AudioSource[] audios = GetComponents<AudioSource>();
 		brickDestroy = audios[0];
@@ -97,7 +102,7 @@ public class BTBO_GM : MonoBehaviour
 	{
 		paddleDeath.Play();
 		lives--;
-		livesText.text = "Lives: " + lives;
+		livesText.text = originalLives + lives;
 		Instantiate (deathParticles, clonePaddle.transform.position, Quaternion.identity);
 		Destroy(clonePaddle);
 		Invoke ("Setup", resetDelay);
@@ -108,7 +113,7 @@ public class BTBO_GM : MonoBehaviour
 	{
 		bricks--;
 		score = score + 100;
-		scoreText.text = "Score: " + score;
+		scoreText.text = originalScore + score;
 		brickDestroy.Play();
 		CheckGameover();
 	}
@@ -116,7 +121,7 @@ public class BTBO_GM : MonoBehaviour
     public void HitBrick()
     {
         score = score + 10;
-        scoreText.text = "Score: " + score;
+        scoreText.text = originalScore + score;
     }
 
     public void CheckLevel()
@@ -131,7 +136,7 @@ public class BTBO_GM : MonoBehaviour
 		{
 			LoseLife();
 			lives++;
-			livesText.text = "Lives: " + lives;
+			livesText.text = originalLives + lives;
 		}
 	}
     */
